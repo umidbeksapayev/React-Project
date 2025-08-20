@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authSlice } from "../slice/auth";
+import { AuthSlice } from "../slice/auth";
 
 export default configureStore({
     reducer:{
-        auth: authSlice.reducer,
+        auth: AuthSlice.reducer,
     },
     devTools:process.env.NODE_ENV !== 'production'
 })
