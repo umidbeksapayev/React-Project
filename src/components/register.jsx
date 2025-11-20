@@ -34,7 +34,7 @@ const Register = () => {
       if(loggedIn){
         navigate('/')
       }
-    })
+    },[loggedIn])
 
 
   return (
