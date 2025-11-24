@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Loader } from "../ui";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const {articles, isLoading} = useSelector( state => state.article )
+  const navigate = useNavigate()
 
   return (
     <div className="container">
@@ -42,6 +44,7 @@ const Main = () => {
                       <button
                         type="button"
                         className="btn btn-sm btn-outline-success"
+                        onClick={()=>{navigate(`article/${item.slug}`)}}
                       >
                         View
                       </button>
