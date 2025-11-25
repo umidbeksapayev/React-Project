@@ -28,8 +28,12 @@ const Navbar = () => {
 			<nav className='d-inline-flex mt-2 mt-md-0 ms-md-auto'>
 				{loggedIn ? (
 					<>
+						<Link className='me-3 py-2 text-dark text-decoration-none' to={'/create-article'}>
+						create
+					</Link>	
 						<p className='m-0 me-3 py-2 text-dark text-decoration-none'>{user.username}</p>
 						<button onClick={logoutHandler} className='btn btn-outline-danger'>Logout</button>
+						
 					</>
 				) : (
 					<>
